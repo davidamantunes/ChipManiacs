@@ -4,7 +4,9 @@ module decoder_13to8 (
     output logic error_detected 
 ); 
 
-logic [7:0] data = {codeword[12], codeword[11], codeword[10], codeword[9], codeword[7], codeword[6], codeword[5], codeword[3]};
+logic [7:0] data;
+assign data = {codeword[12], codeword[11], codeword[10], codeword[9], codeword[7], codeword[6], codeword[5], codeword[3]};
+
 logic [4:0] syndrome;
 logic [12:0] corrected;
 
