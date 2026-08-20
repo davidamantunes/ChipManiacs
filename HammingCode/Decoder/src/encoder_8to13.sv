@@ -1,4 +1,4 @@
-module hamming_13_8_encoder (
+module encoder_8to13 (
     input logic [7:0] data,
     output logic [12:0] encoded
 );
@@ -18,3 +18,5 @@ always_comb begin
     encoded[11] = data[6];
     encoded[12] = data[7];
 end
+
+endmodule
